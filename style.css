@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(95.2deg, rgba(173, 252, 234, 1) 26.8%, rgba(192, 229, 246, 1) 64%);
+}
+
+.gameContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    position: relative;
+}
+
+.box {
+    height: 10vmax;
+    aspect-ratio: 1;
+    border: 3px solid black;
+    font-size: 6.5vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.clamp_together {
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 1s ease-in-out;
+    font-size: 3vmax;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#scoreCounter {
+    font-size: 1vmax;
+    padding: 1em;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 gray;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 120%;
+    height: 70%;
+    width: 70%;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+hr {
+    border: 2px solid black;
+    margin-top: .7em;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-block: 1.5em;
+    margin-inline-start: 1em;
+    text-align: left;
+}
+
+button {
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    box-shadow: 0 0 15px 0 gray;
+    border: none;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    z-index: 0;
+    border-radius: 10px;
+    padding-inline: 3vmax;
+    padding-block: 1vmax;
+}
+
+button:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+button:hover:before {
+    opacity: 1;
+}
+
+button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: rgba(173, 252, 234, 1);
+    top: 0;
+    border-radius: 10px;
+}
+
+#line {
+    position: absolute;
+    transform-origin: left;
+    height: 3px;
+    width: 0;
+    background-color: black;
+    transition: width 1s ease-in-out;
+}
+
+.title {
+    font-size: 3vmax;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    opacity: 0.2;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.box:nth-child(1),
+.box:nth-child(3),
+.box:nth-child(7),
+.box:nth-child(9) {
+    border: none;
+}
+
+.box:nth-child(2),
+.box:nth-child(8) {
+    border-bottom: none;
+    border-top: none;
+}
+
+.box:nth-child(4),
+.box:nth-child(6) {
+    border-left: none;
+    border-right: none;
+}
+
+
+@media screen and (max-width:768px) {
+    .gameContainer {
+        align-self: flex-start;
+        margin-top: 15vh;
+    }
+
+    #scoreCounter {
+        font-size: 1.6vmax;
+        position: absolute;
+        top: 145%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: 110%;
+    }
+
+    button {
+        top: -33%;
+        padding-inline: 5vmax;
+        padding-block: 2vmax;
+    }
+}

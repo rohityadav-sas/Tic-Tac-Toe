@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="gameContainer">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div id="line"></div>
+    <div class="clamp_together">
+      <div class="title">Tic-Tac-Toe By Rohit<sup>&trade;</sup></div>
+      <div id="winnerText"></div>
+    </div>
+    <div id="scoreCounter">
+      <button onclick="gameRestart()">Restart</button>
+      <h2>Score Counter</h2>
+      <hr>
+      <h3>X : <span id="win_x">0</span></h3>
+      <h3>0 : <span id="win_0">0</span></h3>
+    </div>
+  </div>
+</body>
+
+<script src='https://kit.fontawesome.com/8e5e768940.js' crossorigin='anonymous'></script>
+
+</html>
