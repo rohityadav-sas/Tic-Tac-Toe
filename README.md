@@ -2,6 +2,9 @@
 
 Tic-Tac-Toe game built using HTML, CSS, and JavaScript. Play against a friend and see who can achieve three in a row first!
 
+## Preview
+![Preview.png](https://github.com/rohityadav-sas/Tic-Tac-Toe/blob/master/Preview)
+
 ## Features
 
 - Interactive and responsive design
