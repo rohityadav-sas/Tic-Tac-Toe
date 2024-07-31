@@ -46,12 +46,18 @@ If you'd like to contribute to this project, please follow these steps:
 2. Create a new branch
    ```bash
    git checkout -b feature/new-feature
+   ```
+   
 3. Make changes and commit them
    ```bash
    git commit -am 'Add new feature'
+   ```
+   
 4. Push to the branch
    ```bash
    git push origin feature/new-feature
+   ```
+   
 5. Create a pull request
 
 ## License
