@@ -6,8 +6,8 @@
 - [Features](#features)
 - [How to Play](#how-to-play)
 - [Installation](#installation)
-- [Contributing](#contributing)
 - [License](#license)
+- [Contributing](#contributing)
 
 ## Preview
 ![preview.png](./assets/preview.png?raw=true)
@@ -37,28 +37,10 @@
    cd tic-tac-toe
 3. Open index.html in your browser
 
-Alternatively, you can download the ZIP file of the repository and extract it.
+## License
+
+This project is licensed under the ISC License. See the [LICENSE](./LICENSE) file for details.
 
 ## Contributing
-If you'd like to contribute to this project, please follow these steps:
 
-1. Fork the repository
-2. Create a new branch
-   ```bash
-   git checkout -b feature/new-feature
-   ```
-   
-3. Make changes and commit them
-   ```bash
-   git commit -am 'Add new feature'
-   ```
-   
-4. Push to the branch
-   ```bash
-   git push origin feature/new-feature
-   ```
-   
-5. Create a pull request
-
-## License
-This project is licensed under the MIT License.
+Contributions are welcome! Please feel free to submit a Pull Request.
