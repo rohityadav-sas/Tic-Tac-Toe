@@ -31,10 +31,10 @@
 
 ## Installation
 
-1. ```bash
+1. Clone the repository:
+    ```bash
    git clone https://github.com/rohityadav-sas/Tic-Tac-Toe
-2. ```bash
-   cd tic-tac-toe
+
 3. Open ```index.html``` in your browser
 
 ## License
